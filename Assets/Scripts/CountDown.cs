@@ -11,9 +11,13 @@ public class CountDown : MonoBehaviour
     public GameObject lapTimer;
     public GameObject carControls;
     public AudioSource levelMusic;
+    public TMP_Text lapCounter;
+    private int currentLap = 1;
+    public int lapRequirement = 3;
     
     void Start()
     {
+        lapCounter.text = currentLap + "/" + lapRequirement;
         StartCoroutine(CountStart());
     }
 

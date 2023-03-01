@@ -29,8 +29,8 @@ public class LapTimeManager : MonoBehaviour
             minutes += 1;
         }
 
-        SecondBox.text = seconds >= 10 ? seconds.ToString() + "." : "0" + seconds.ToString() + ".";
-        MinuteBox.text = minutes >= 10 ? minutes.ToString() + "." : "0" + minutes.ToString() + ".";
+        SecondBox.text = seconds >= 10 ? seconds.ToString() + ":" : "0" + seconds.ToString() + ":";
+        MinuteBox.text = minutes >= 10 ? minutes.ToString() + ":" : "0" + minutes.ToString() + ":";
         MilleBox.text = milleSeconds.ToString("F0");
     }
 }

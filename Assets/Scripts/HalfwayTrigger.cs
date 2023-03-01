@@ -11,7 +11,10 @@ public class HalfwayTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        lapCompleteTrigger.SetActive(true);
-        halfwayTrigger.SetActive(false);
+        if (other.tag.Equals("Player"))
+        {
+            lapCompleteTrigger.SetActive(true);
+            halfwayTrigger.SetActive(false);
+        }
     }
 }
