@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DreamCar01Track : MonoBehaviour
+public class UserAIAfterRace : MonoBehaviour
 {
 
     public GameObject theMarker;
@@ -12,7 +12,7 @@ public class DreamCar01Track : MonoBehaviour
 
     private IEnumerator OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("DreamCar01"))
+        if (!other.gameObject.tag.Equals("DreamCar01"))
         {
             theMarker.transform.position = Markers.transform.GetChild(markTracker).position;
             this.GetComponent<SphereCollider>().enabled = false;
@@ -23,7 +23,7 @@ public class DreamCar01Track : MonoBehaviour
                 markTracker = 0;
             }
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
             this.GetComponent<SphereCollider>().enabled = true;
         }
         

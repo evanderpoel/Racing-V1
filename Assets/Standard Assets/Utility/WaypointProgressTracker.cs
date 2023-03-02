@@ -93,7 +93,7 @@ namespace UnityStandardAssets.Utility
                     speed = Mathf.Lerp(speed, (lastPosition - transform.position).magnitude/Time.deltaTime,
                                        Time.deltaTime);
                 }
-                target.position =
+                /*target.position =
                     circuit.GetRoutePoint(progressDistance + lookAheadForTargetOffset + lookAheadForTargetFactor*speed)
                            .position;
                 target.rotation =
@@ -103,7 +103,7 @@ namespace UnityStandardAssets.Utility
 
 
                 // get our current progress along the route
-                progressPoint = circuit.GetRoutePoint(progressDistance);
+                progressPoint = circuit.GetRoutePoint(progressDistance);*/
                 Vector3 progressDelta = progressPoint.position - transform.position;
                 if (Vector3.Dot(progressDelta, progressPoint.direction) < 0)
                 {

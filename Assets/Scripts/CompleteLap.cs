@@ -4,11 +4,18 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
+using UnityStandardAssets.Utility;
+using UnityStandardAssets.Vehicles.Car;
 
 public class CompleteLap : MonoBehaviour
 {
     public GameObject finishLineTrigger;
     public GameObject halfwayTrigger;
+    public GameObject mainCanvas;
+    public GameObject finishCube;
+    public GameObject MyCar;
+    public GameObject LevelMusic;
+    [SerializeField] private GameObject userAITracker;
 
     public TMP_Text minuteDisplay;
     public TMP_Text secondDisplay;
@@ -96,6 +103,15 @@ public class CompleteLap : MonoBehaviour
     private void completeRaceSequence()
     {
         calculateAndSetFinalTime();
+        MyCar.GetComponent<CarUserControl>().enabled = false;
+        userAITracker.SetActive(true);
+        MyCar.GetComponent<CarAudio>().enabled = false;
+        MyCar.GetComponent<CarAIControl>().enabled = true;
+        MyCar.GetComponent<WaypointProgressTracker>().enabled = true;
+        LevelMusic.SetActive(false);
+        
+        mainCanvas.SetActive(false);
+        finishCube.SetActive(true);
         CompleteRaceScreen.SetActive((true));
         finishLineTrigger.SetActive(false);
         halfwayTrigger.SetActive(false);

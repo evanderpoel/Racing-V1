@@ -18,6 +18,8 @@ public class CountDown : MonoBehaviour
     void Start()
     {
         lapCounter.text = currentLap + "/" + lapRequirement;
+        getReady.volume = 0.25f;
+        goAudio.volume = 0.25f;
         StartCoroutine(CountStart());
     }
 
