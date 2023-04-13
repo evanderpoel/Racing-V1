@@ -3,20 +3,25 @@
 The goal of this project is to learn unity and apply my skills to create a function racing game.
 
 ---
-## ***This is an unfinished state***
+## ***This project is still in progress***
 ---
  ## *Screenshots to show projects functionality*
- - Main Menu UI
+ -  ***Main Menu UI***
+ <br/>
 ![Main Menu UI](./ReadmeImages/Screenshot%202023-04-13%20160150.png)
 ---
-- Car And Track Selection
+- ***Car And Track Selection***
+<br/>
 ![Car and Track Selection](./ReadmeImages/Screenshot%202023-04-13%20160222.png)
 ---
-- In Game UI
+- ***In Game UI***
+<br/>
 ![In Game UI](./ReadmeImages/Screenshot%202023-04-13%20160455.png)
 ---
-- Countdown
+- ***Countdown Gif***
+<br/>
 ![Countdown](./ReadmeImages/Countdown.gif)
 ---
-- Race End
+- ***Race End Gif***
+<br/>
 ![Countdown](./ReadmeImages/FinishLine.gif)
